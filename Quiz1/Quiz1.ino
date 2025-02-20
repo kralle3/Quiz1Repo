@@ -9,21 +9,21 @@ const int buttonBlue = 4;
 void setup() {
     pinMode(redPin, OUTPUT);
     pinMode(greenPin, OUTPUT);
-    
+    pinMode(bluePin, OUTPUT);
     
     pinMode(buttonRed, INPUT_PULLUP);
     pinMode(buttonGreen, INPUT_PULLUP);
-   
+    pinMode(buttonBlue, INPUT_PULLUP);
 }
 
 void loop() {
     int redState = digitalRead(buttonRed);
     int greenState = digitalRead(buttonGreen);
- 
+    int blueState = digitalRead(buttonBlue);
 
-    digitalWrite(redPin, !redState);  // Invert logic (LOW means pressed)
+    digitalWrite(redPin, !redState); // Invert logic (LOW means pressed)
     digitalWrite(greenPin, !greenState);
-  
+    digitalWrite(bluePin, !blueState);
 }
 
 
